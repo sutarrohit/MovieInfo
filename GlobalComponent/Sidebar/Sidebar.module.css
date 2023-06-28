@@ -1,0 +1,48 @@
+.Sidebar_box {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logo,
+.categories,
+.genres {
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.link_box {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  padding: 0.5rem 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .Sidebar {
+    position: absolute;
+    height: 100vh;
+    box-shadow: var(--boxShadow);
+    z-index: 1111;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+
+  .sliderMenuOpen {
+    transform: translate(0rem);
+    transition: 0.3s ease-in-out;
+  }
+
+  .sliderMenuClose {
+    transform: translate(-30rem);
+    transition: 0.4s ease-in-out;
+  }
+}

@@ -1,0 +1,516 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th {
+  text-align: left;
+}
+
+*,
+*::before,
+*::after,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-padding-start: 0;
+  align-items: flex-start;
+  text-index: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  line-height: 1em;
+}
+
+input[type="text"],
+input[type="reset"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="time"],
+input[type="week"],
+input[type="month"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="submit"],
+input[type="color"],
+input[type="file"],
+button,
+textarea,
+select {
+  height: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="color"] {
+  width: 1em;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+details,
+summary {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+mark {
+  background: none;
+}
+
+hr {
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+u {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  outline: none;
+}
+
+@font-face {
+  font-family: "Greycliff";
+  src: url(./fonts/acb7ae59aec93313db2762744492895a.woff2) format("woff2");
+
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Greycliff";
+  src: url(./fonts/55ce09f79fd63a05a7fdbbaffceac45f.woff2) format("woff2");
+
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Greycliff";
+  src: url(./fonts/e3383e5dea76ba279d0459e08f8bd376.woff2) format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+.sizes-viewport-dummy {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+html {
+  font-size: 17px;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+@media (max-width: 1600px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1300px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  html {
+    font-size: 10px !important;
+  }
+}
+
+html.is-theme-dark {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p a,
+ul a,
+ol a {
+  text-decoration: underline;
+}
+
+li {
+  line-height: 1.5em;
+}
+
+strong,
+.strong {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href^="mailto"] {
+  white-space: nowrap;
+}
+
+button {
+  cursor: pointer;
+}
+
+small {
+  font-size: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-family: "Greycliff", sans-serif;
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.75rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1600px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1300px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  html {
+    font-size: 10px !important;
+  }
+}
+
+/* UTILITY CLASS-------------------- */
+
+/* THEM COLOR */
+
+:root {
+  --dark: #24252d;
+  --boxShadow: 2px 2px 20px #1a1a1a;
+  --boxCard: 2px 2px 20px #24252d65;
+  --light: #ffffff;
+}
+
+.darkMode {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.lightMode {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.colorWhite {
+  color: #fff;
+}
+
+.colordark {
+  color: #1a1a1a;
+}
+
+.imageDark {
+  filter: invert(100%);
+}
+.imageWhite {
+  filter: invert(0%);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  /* border: 1px solid gray; */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  /* background-color: var(--light); */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background: gray;
+  width: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,8 @@
+.Button {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 0.2rem;
+  font-weight: 700;
+}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-// INTERNAL IMPORT
-import { Category, Sidebar } from "../GlobalComponent/index";
+// INTENAL IMPORT
+import { MovieDetail, Sidebar, Category } from "@/GlobalComponent";
 
-const Home = () => {
+const movie = () => {
   // STATE VARIABLES
   const [themeMode, SetThemeMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Home = () => {
         SetThemeMode={SetThemeMode}
       />
 
-      <Category
+      <MovieDetail
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         themeMode={themeMode}
@@ -27,4 +27,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default movie;

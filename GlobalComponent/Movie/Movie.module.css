@@ -1,0 +1,52 @@
+.Movie {
+  width: 100%;
+  margin: 0 auto;
+  padding-block: 4rem;
+}
+
+.movie_box {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.movie_card {
+  box-shadow: var(--boxShadow);
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.movie_card_img {
+  width: 100%;
+  height: auto;
+}
+
+.movie_info {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  .movie_box {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movie_box {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .movie_box {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

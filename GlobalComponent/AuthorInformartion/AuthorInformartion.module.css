@@ -1,0 +1,75 @@
+.AuthorInformartion_box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.AuthorInformartion_image {
+  padding: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.authorInfo {
+  display: grid;
+  gap: 1rem;
+}
+
+.button {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.button button {
+  border: 1px solid #a1a1a1;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem 2rem 2rem;
+  font-weight: 600;
+}
+
+.actorMovies {
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .actorMovies {
+    width: 90%;
+    margin: 0 auto;
+    /* text-align: left; */
+  }
+
+  .AuthorInformartion_box {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    margin-top: 2.5rem;
+  }
+
+  .authorInfo {
+    text-align: center;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .authorInfoBio {
+    /* text-align: left; */
+    margin-top: -1rem;
+  }
+
+  .button {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .actorMovies {
+    margin-top: 2rem;
+  }
+}

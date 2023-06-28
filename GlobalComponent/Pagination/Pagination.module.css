@@ -1,0 +1,31 @@
+.Pagination {
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.Pagination_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.Pagination_box p {
+  font-size: 2rem;
+  margin-top: 1.7rem;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .Pagination {
+    width: 70%;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .Pagination {
+    width: 70%;
+    margin: 1rem auto;
+  }
+}

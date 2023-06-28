@@ -8,7 +8,7 @@ import Button from "./Button/Button";
 import MovieDetail from "./MovieDetail/MovieDetail";
 import MovieInformation from "./MovieInformation/MovieInformation";
 import AutorDetail from "./AutorDetail/AutorDetail";
-import AutorInformation from "./AutorInformation/AutorInformation";
+import AuthorInformartion from "./AuthorInformartion/AuthorInformartion";
 import Loader from "./Loader/Loader";
 import Error from "./Error/Error";
 import Profile from "./Profile/Profile";
@@ -27,7 +27,7 @@ export {
   MovieDetail,
   MovieInformation,
   AutorDetail,
-  AutorInformation,
+  AuthorInformartion,
   Loader,
   Error,
   Profile,
