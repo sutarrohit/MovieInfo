@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
 // INTERNAL IMPORT
-import { Category, Sidebar } from "../GlobalComponent/index";
+import { Sidebar, AutorDetail } from "@/GlobalComponent";
 
-const Home = () => {
-  // STATE VARIABLES
+const author = () => {
   const [themeMode, SetThemeMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <div className={` ${"container"}  ${themeMode ? "darkMode" : "lightMode"}`}>
       <Sidebar
@@ -17,7 +15,7 @@ const Home = () => {
         SetThemeMode={SetThemeMode}
       />
 
-      <Category
+      <AutorDetail
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         themeMode={themeMode}
@@ -27,4 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default author;

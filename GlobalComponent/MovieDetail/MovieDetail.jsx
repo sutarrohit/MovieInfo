@@ -5,15 +5,7 @@ import React from "react";
 import Style from "./MovieDetail.module.css";
 import { Header, MovieInformation } from "../index";
 
-const MovieDetail = ({
-  menuOpen,
-  setMenuOpen,
-  themeMode,
-  movieInfo,
-  isFetching,
-  recommendation,
-  isRecommendationFetching,
-}) => {
+const MovieDetail = ({ menuOpen, setMenuOpen, themeMode, SetThemeMode }) => {
   return (
     <div
       className={`${Style.MovieDetail} ${themeMode ? "darkMode" : "lightMode"}`}
@@ -23,14 +15,14 @@ const MovieDetail = ({
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           themeMode={themeMode}
+          SetThemeMode={SetThemeMode}
         />
 
         <MovieInformation
-          movieInfo={movieInfo}
-          isFetching={isFetching}
-          recommendation={recommendation}
-          isRecommendationFetching={isRecommendationFetching}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
           themeMode={themeMode}
+          SetThemeMode={SetThemeMode}
         />
       </div>
     </div>

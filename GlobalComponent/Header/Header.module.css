@@ -41,14 +41,6 @@
   display: none;
 }
 
-.logoShow {
-  display: grid;
-  grid-template-columns: 1fr 3r;
-}
-.logoShow .logoShow_img {
-  display: none;
-}
-
 /* Media Queries */
 @media (max-width: 600px) {
   .search {
@@ -58,9 +50,6 @@
   .menuBtn {
     display: block;
   }
-  .logoShow .logoShow_img {
-    display: block;
-  }
 }
 
 @media (max-width: 600px) {
@@ -69,9 +58,6 @@
   }
 
   .menuBtn {
-    display: block;
-  }
-  .logoShow .logoShow_img {
     display: block;
   }
 }

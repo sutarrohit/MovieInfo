@@ -1,15 +1,5 @@
 import "@/styles/globals.css";
 
-// INTERNAL IMPORT
-import { Provider } from "react-redux";
-import store from "../api/store";
-
-const App = ({ Component, pageProps }) => {
-  return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
-  );
-};
-
-export default App;
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}

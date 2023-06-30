@@ -1,44 +1,108 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
 
 // INTERNAL IMPORT
 import Style from "./Sidebar.module.css";
-import { Loader } from "../index";
 import images from "../Images/index";
 import genreIcons from "../Images/genres/index";
-import { selectGenreOrCategory } from "../../api/currentGenreOrCategory";
-import { useGetGenresQuery } from "../../api/TMDB";
 
-const Sidebar = ({ menuOpen, setMenuOpen, themeMode }) => {
-  // API CALLS
-  const { genreIdOrCategoryName } = useSelector((state) => {
-    return state.currentGenreOrCategory;
-  });
-  const { data, isFetching } = useGetGenresQuery();
-  const dispatch = useDispatch();
-
+const Sidebar = ({ menuOpen, setMenuOpen, themeMode, SetThemeMode }) => {
   // CATEGORIES LIST
   const categories = [
     {
-      label: "Popular",
-      value: "popular",
+      name: "Popular",
+      icon: "popular",
     },
     {
-      label: "Top Rated",
-      value: "topRated",
+      name: "Top Rated",
+      icon: "topRated",
     },
     {
-      label: "Upcoming",
-      value: "upcoming",
+      name: "Upcoming",
+      icon: "upcoming",
     },
   ];
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [genreIdOrCategoryName]);
-
+  // GENRES
+  const genres = [
+    {
+      name: "Action",
+      icon: "action",
+    },
+    {
+      name: "Animation",
+      icon: "animation",
+    },
+    {
+      name: "Upcoming",
+      icon: "upcoming",
+    },
+    {
+      name: "Adenture",
+      icon: "adventure",
+    },
+    {
+      name: "Comedy",
+      icon: "comedy",
+    },
+    {
+      name: "Crime",
+      icon: "crime",
+    },
+    {
+      name: "Drama",
+      icon: "drama",
+    },
+    {
+      name: "Documentary",
+      icon: "documentary",
+    },
+    {
+      name: "Family",
+      icon: "family",
+    },
+    {
+      name: "Fantasy",
+      icon: "fantasy",
+    },
+    {
+      name: "History",
+      icon: "history",
+    },
+    {
+      name: "Horror",
+      icon: "horror",
+    },
+    {
+      name: "Music",
+      icon: "music",
+    },
+    {
+      name: "Mystery",
+      icon: "mystery",
+    },
+    {
+      name: "Romance",
+      icon: "romance",
+    },
+    {
+      name: "Thriller",
+      icon: "thriller",
+    },
+    {
+      name: "Tv Movie",
+      icon: "tv movie",
+    },
+    {
+      name: "War",
+      icon: "war",
+    },
+    {
+      name: "Western",
+      icon: "western",
+    },
+  ];
   return (
     <div
       className={
@@ -61,8 +125,8 @@ const Sidebar = ({ menuOpen, setMenuOpen, themeMode }) => {
               }`}
               src={images.darkLogo}
               alt="logo"
-              width={220}
-              height={90}
+              width={250}
+              height={110}
             />
           </div>
         </Link>
@@ -74,20 +138,17 @@ const Sidebar = ({ menuOpen, setMenuOpen, themeMode }) => {
             <strong>Categories</strong>
           </p>
 
-          {categories.map(({ label, value }) => (
-            <Link href="/" key={value}>
+          {categories.map((el, key) => (
+            <Link href="" key={key}>
               {""}
-              <p
-                className={Style.link_box}
-                onClick={() => dispatch(selectGenreOrCategory(value))}
-              >
+              <p className={Style.link_box}>
                 <Image
                   className={themeMode ? "imageDark" : "ImageWhite"}
-                  src={genreIcons[label.toLowerCase()]}
+                  src={genreIcons[el.icon]}
                   alt="categoryLogo"
                   height={38}
                 />
-                <span>{label}</span>
+                <span>{el.name}</span>
               </p>
             </Link>
           ))}
@@ -99,27 +160,19 @@ const Sidebar = ({ menuOpen, setMenuOpen, themeMode }) => {
           <p>
             <strong>Genres</strong>
           </p>
-
-          {isFetching ? (
-            <Loader />
-          ) : (
-            data.genres.map(({ name, id }) => (
-              <Link href="/" key={id}>
-                <p
-                  className={Style.link_box}
-                  onClick={() => dispatch(selectGenreOrCategory(id))}
-                >
-                  <Image
-                    className={themeMode ? "imageDark" : "ImageWhite"}
-                    src={genreIcons[name.toLowerCase()]}
-                    alt="categoryLogo"
-                    height={38}
-                  />
-                  <span>{name}</span>
-                </p>
-              </Link>
-            ))
-          )}
+          {genres.map((el, key) => (
+            <Link href="#" key={key}>
+              <p className={Style.link_box}>
+                <Image
+                  className={themeMode ? "imageDark" : "ImageWhite"}
+                  src={genreIcons[el.icon]}
+                  alt="categoryLogo"
+                  height={38}
+                />
+                <span>{el.name}</span>
+              </p>
+            </Link>
+          ))}
         </div>
 
         {/* -------------------------------------- */}

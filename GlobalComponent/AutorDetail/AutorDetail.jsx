@@ -4,13 +4,7 @@ import React from "react";
 import Style from "./AutorDetail.module.css";
 import { Header, AuthorInformartion } from "../index";
 
-const AutorDetail = ({
-  menuOpen,
-  setMenuOpen,
-  themeMode,
-  actor,
-  actorMovies,
-}) => {
+const AutorDetail = ({ menuOpen, setMenuOpen, themeMode, SetThemeMode }) => {
   return (
     <div
       className={` ${Style.AutorDetail} ${
@@ -22,11 +16,13 @@ const AutorDetail = ({
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           themeMode={themeMode}
+          SetThemeMode={SetThemeMode}
         />
         <AuthorInformartion
-          actor={actor}
-          actorMovies={actorMovies}
+          menuOpen={menuOpen}
+          setMenuOpen={setMenuOpen}
           themeMode={themeMode}
+          SetThemeMode={SetThemeMode}
         />
       </div>
     </div>
