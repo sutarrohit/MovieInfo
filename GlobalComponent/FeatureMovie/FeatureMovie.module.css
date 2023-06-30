@@ -19,12 +19,14 @@
 }
 
 .movieInfo_movie {
-  width: 25rem;
+  width: 70%;
   position: absolute;
   bottom: 2rem;
   display: grid;
   gap: 1rem;
   left: 2rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 /* Media Queries */
@@ -34,7 +36,7 @@
     height: auto;
   }
 
-  .movieInfo_movie {
+  .movieInfo_movie p {
     display: none;
   }
 }

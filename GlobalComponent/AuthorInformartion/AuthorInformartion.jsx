@@ -7,34 +7,53 @@ import Style from "./AuthorInformartion.module.css";
 import actor from "../Images/actor/index";
 import { Movie } from "../index";
 
-const AuthorInformartion = () => {
+const AuthorInformartion = ({ themeMode, actor, actorMovies }) => {
   return (
-    <div className={Style.AuthorInformartion}>
+    <div
+      className={`${Style.AuthorInformartion} ${
+        themeMode ? "darkMode" : "lightMode"
+      }`}
+    >
       <div className={Style.AuthorInformartion_box}>
         <div className={Style.AuthorInformartion_image}>
-          <Image className={Style.image} src={actor.actor} alt="actor" />
+          <img
+            className={Style.image}
+            src={
+              actor?.profile_path
+                ? `https://image.tmdb.org/t/p/original${actor?.profile_path}`
+                : "https://www.fillmurray.com/200/300"
+            }
+            alt={actor?.name}
+          />
         </div>
 
         {/*Author Info  */}
 
         <div className={Style.authorInfo}>
-          <h1>Rohit Sutar</h1>
+          <h1>{actor?.name}</h1>
           <p>
-            Bron: <strong>1996</strong>
+            Bron:{" "}
+            <strong>
+              {new Date(actor?.birthday).toLocaleDateString(undefined, {
+                day: "numeric",
+                month: "short",
+                year: "numeric",
+              })}
+            </strong>
           </p>
           <p className={Style.authorInfoBio}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, alias
-            voluptatem! Esse, repellat quisquam facilis harum sed nisi voluptate
-            hic architecto perferendis laboriosam amet similique temporibus
-            necessitatibus, cumque tempora a!
+            {actor?.biography || "Sorry, no biography yet..."}
           </p>
 
           {/* Button */}
           <div className={Style.button}>
-            <Link href="#">
+            <Link
+              href={`https://imdb.com/name/${actor?.imdb_id}`}
+              target="_blank"
+            >
               <button>IMDB</button>
             </Link>
-            <Link href="#">
+            <Link href="/">
               <button>Back</button>
             </Link>
           </div>
@@ -44,7 +63,7 @@ const AuthorInformartion = () => {
       {/* ACTOR MOVIE */}
       <div className={Style.actorMovies}>
         <h1>All The Movies</h1>
-        <Movie />
+        {actorMovies && <Movie movies={actorMovies} />}
       </div>
     </div>
   );
