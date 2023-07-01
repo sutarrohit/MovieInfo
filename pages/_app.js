@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }) => {
       domain={DOMAIN}
       clientId={CLIENTID}
       authorizationParams={{
-        redirect_uri: "http://localhost:3000/",
+        redirect_uri: "https://movie-info-sand.vercel.app/",
       }}
     >
       <Provider store={store}>
