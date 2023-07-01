@@ -1,0 +1,10 @@
+.Donate {
+  background: red;
+  height: 4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  color: #fff;
+}

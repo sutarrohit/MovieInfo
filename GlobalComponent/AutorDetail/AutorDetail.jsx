@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // INTERNAL IMPORT
 import Style from "./AutorDetail.module.css";
@@ -11,6 +11,9 @@ const AutorDetail = ({
   actor,
   actorMovies,
 }) => {
+  // STATE VARIABLE
+  const [openLogin, setOpenLogin] = useState(false);
+
   return (
     <div
       className={` ${Style.AutorDetail} ${
@@ -19,6 +22,8 @@ const AutorDetail = ({
     >
       <div className={Style.authorDetail_box}>
         <Header
+          openLogin={openLogin}
+          setOpenLogin={setOpenLogin}
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           themeMode={themeMode}

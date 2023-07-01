@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import dynamic from "next/dynamic";
 
 // INTERNAL IMPORT
 import Style from "./Category.module.css";
-import { Header, Movie, FeatureMovie, Pagination, Error } from "../index";
+import {
+  Header,
+  Movie,
+  FeatureMovie,
+  Pagination,
+  Error,
+  Donate,
+} from "../index";
 
 const Category = ({
   menuOpen,
@@ -15,6 +23,11 @@ const Category = ({
   isFetching,
   Loader,
 }) => {
+  // STATE VARIABLES
+  const [openLogin, setOpenLogin] = useState(false);
+  const [openDonate, setOpenDonate] = useState(true);
+  const UseAlan = dynamic(() => import("../Alan/Alan"));
+
   return (
     <div
       className={`${Style.Category} ${themeMode ? "darkMode" : "lightMode"}`}
@@ -23,7 +36,11 @@ const Category = ({
         <Loader />
       ) : movies?.results.length === 0 ? (
         <>
+          {openDonate && <Donate setOpenDonate={setOpenDonate} />}
+
           <Header
+            openLogin={openLogin}
+            setOpenLogin={setOpenLogin}
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             themeMode={themeMode}
@@ -33,11 +50,15 @@ const Category = ({
         </>
       ) : (
         <div className={Style.category_box}>
+          {openDonate && <Donate setOpenDonate={setOpenDonate} />}
           <Header
+            openLogin={openLogin}
+            setOpenLogin={setOpenLogin}
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             themeMode={themeMode}
           />
+          <UseAlan />
           <FeatureMovie
             themeMode={themeMode}
             isFetching={isFetching}

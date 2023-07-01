@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // INTERNAL IMPORT
 
@@ -14,12 +14,16 @@ const MovieDetail = ({
   recommendation,
   isRecommendationFetching,
 }) => {
+  // STATE VARIABLE
+  const [openLogin, setOpenLogin] = useState(false);
   return (
     <div
       className={`${Style.MovieDetail} ${themeMode ? "darkMode" : "lightMode"}`}
     >
       <div className={Style.movieDetail_box}>
         <Header
+          openLogin={openLogin}
+          setOpenLogin={setOpenLogin}
           menuOpen={menuOpen}
           setMenuOpen={setMenuOpen}
           themeMode={themeMode}
