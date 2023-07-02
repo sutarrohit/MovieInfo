@@ -9,40 +9,10 @@ import Link from "next/link";
 import { Loader } from "../index";
 
 const Movie = ({ themeMode, isFetching, movies, excludeFirst }) => {
-  // Dummy Data
-
-  const movieList = [
-    {
-      name: "Jungle Book",
-      rating: 1,
-      image: images.MovieImg,
-    },
-    {
-      name: "Jungle Book",
-      rating: 3,
-      image: images.MovieImg,
-    },
-    {
-      name: "Jungle Book",
-      rating: 4,
-      image: images.MovieImg,
-    },
-    {
-      name: "Jungle Book",
-      rating: 3,
-      image: images.MovieImg,
-    },
-    {
-      name: "Jungle Book",
-      rating: 5,
-      image: images.MovieImg,
-    },
-  ];
-
   const startFrom = excludeFirst ? 1 : 0;
 
   return (
-    <div className={Style.Movie}>
+    <div className={Style.Movie} id="skills">
       <div className={Style.movie_box}>
         {/*-------Card----- */}
 
@@ -56,7 +26,9 @@ const Movie = ({ themeMode, isFetching, movies, excludeFirst }) => {
                   src={
                     movie.poster_path
                       ? `https://image.tmdb.org/t/p/original${movie?.backdrop_path}`
-                      : "https://www.fillmurray.com/200/300"
+                      : themeMode
+                      ? images.darkLogo
+                      : images.lightLogo
                   }
                   alt={movie.original_title}
                   className={Style.movie_card_img}

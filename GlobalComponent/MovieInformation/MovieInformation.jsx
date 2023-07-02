@@ -9,6 +9,7 @@ import Style from "./MovieInformation.module.css";
 
 import genreIcon from "../Images/genres/index";
 import actor from "../Images/actor/index";
+import images from "../Images/index";
 import { Movie, Loader } from "../index";
 import { selectGenreOrCategory } from "../../api/currentGenreOrCategory";
 
@@ -34,7 +35,9 @@ const MovieInformation = ({
               src={
                 movieInfo?.poster_path
                   ? `https://image.tmdb.org/t/p/original${movieInfo?.backdrop_path}`
-                  : "https://www.fillmurray.com/200/300"
+                  : themeMode
+                  ? images.darkLogo
+                  : images.lightLogo
               }
               alt={movieInfo?.original_title}
             />
@@ -83,7 +86,7 @@ const MovieInformation = ({
             <h1>{movieInfo?.title}</h1>
             <p>
               {movieInfo?.runtime} min | Language:{" "}
-              {movieInfo?.spoken_languages[0].english_name} |
+              {movieInfo?.spoken_languages[0]?.name} |
               <strong> Rating: 52/100</strong>
             </p>
 

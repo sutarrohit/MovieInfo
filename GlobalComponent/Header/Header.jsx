@@ -15,6 +15,7 @@ import images from "../Images/index";
 import {
   selectGenreOrCategory,
   searchMovie,
+  setThemeColor,
 } from "../../api/currentGenreOrCategory";
 
 const Header = ({ menuOpen, setMenuOpen, openLogin, setOpenLogin }) => {
@@ -38,7 +39,7 @@ const Header = ({ menuOpen, setMenuOpen, openLogin, setOpenLogin }) => {
   };
 
   return (
-    <div className={Style.Header}>
+    <div className={Style.Header} id="top">
       {/* Search */}
       <div className={Style.header_box}>
         {pathname == "/" ? (
@@ -96,13 +97,9 @@ const Header = ({ menuOpen, setMenuOpen, openLogin, setOpenLogin }) => {
           </div>
 
           {themeMode ? (
-            <MdBrightnessHigh
-              onClick={() => dispatch(selectGenreOrCategory(false))}
-            />
+            <MdBrightnessHigh onClick={() => dispatch(setThemeColor(false))} />
           ) : (
-            <MdBrightnessLow
-              onClick={() => dispatch(selectGenreOrCategory(true))}
-            />
+            <MdBrightnessLow onClick={() => dispatch(setThemeColor(true))} />
           )}
 
           {/*Mobile MenuButton */}

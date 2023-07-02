@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 // INTENAL IMPORT
 import { MovieDetail, Sidebar } from "@/GlobalComponent";
 import { useGetMovieQuery, useGetRecommendationsQuery } from "../../api/TMDB";
+import Link from "next/link";
 
 const movie = () => {
   // STATE VARIABLES
@@ -19,6 +20,14 @@ const movie = () => {
 
   const { data: recommendation, isFetching: isRecommendationFetching } =
     useGetRecommendationsQuery({ list: "/recommendations", movie_id: moiveId });
+
+  const handleClick = () => {
+    if (data) router.push("#top", undefined, { scroll: true });
+  };
+
+  useEffect(() => {
+    handleClick();
+  }, [data]);
 
   return (
     <div className={` ${"container"}  ${themeMode ? "darkMode" : "lightMode"}`}>

@@ -12,6 +12,9 @@ export const genreOrCategory = createSlice({
     selectGenreOrCategory: (state, action) => {
       state.genreIdOrCategoryName = action.payload;
       state.searchQuery = "";
+    },
+
+    setThemeColor: (state, action) => {
       state.themeMode = action.payload;
     },
 
@@ -21,5 +24,6 @@ export const genreOrCategory = createSlice({
   },
 });
 
-export const { selectGenreOrCategory, searchMovie } = genreOrCategory.actions;
+export const { selectGenreOrCategory, searchMovie, setThemeColor } =
+  genreOrCategory.actions;
 export default genreOrCategory.reducer;

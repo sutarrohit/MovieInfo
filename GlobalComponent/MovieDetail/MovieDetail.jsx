@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 // INTERNAL IMPORT
 
@@ -16,6 +17,10 @@ const MovieDetail = ({
 }) => {
   // STATE VARIABLE
   const [openLogin, setOpenLogin] = useState(false);
+  const handleClick = () => {
+    console.log("Hello");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div
       className={`${Style.MovieDetail} ${themeMode ? "darkMode" : "lightMode"}`}
@@ -30,6 +35,7 @@ const MovieDetail = ({
         />
 
         <MovieInformation
+          onClick={() => handleClick()}
           movieInfo={movieInfo}
           isFetching={isFetching}
           recommendation={recommendation}
