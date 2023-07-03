@@ -44,7 +44,7 @@ const useAlan = () => {
     });
   }, []);
 
-  return <div class="alan-btn" />;
+  return <div className="alan-btn" />;
 };
 
 export default useAlan;

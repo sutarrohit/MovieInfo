@@ -17,7 +17,7 @@ const Donate = ({ setOpenDonate }) => {
         </p>
       </div>
 
-      <span onClick={() => setOpenDonate(false)} class="icon">
+      <span onClick={() => setOpenDonate(false)} className="icon">
         <svg
           width="11"
           height="11"
@@ -31,7 +31,7 @@ const Donate = ({ setOpenDonate }) => {
             x2="8.87868"
             y2="2"
             stroke="#FE6854"
-            stroke-width="3"
+            strokeWidth="3"
             strokeLinecap="round"
           />
           <line
@@ -40,8 +40,8 @@ const Donate = ({ setOpenDonate }) => {
             x2="2"
             y2="2.12132"
             stroke="#FE6854"
-            stroke-width="3"
-            stroke-linecap="round"
+            strokeWidth="3"
+            strokeLinecap="round"
           />
         </svg>
       </span>

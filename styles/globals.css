@@ -481,11 +481,11 @@ h4,
 /* Scroll Bar */
 ::-webkit-scrollbar {
   width: 0.5rem;
-  /* border: 1px solid gray; */
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 0;
+
   /* background-color: var(--light); */
 }
 

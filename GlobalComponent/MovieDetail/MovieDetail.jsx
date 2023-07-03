@@ -18,7 +18,6 @@ const MovieDetail = ({
   // STATE VARIABLE
   const [openLogin, setOpenLogin] = useState(false);
   const handleClick = () => {
-    console.log("Hello");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (

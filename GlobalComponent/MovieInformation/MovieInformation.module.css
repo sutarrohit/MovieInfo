@@ -79,6 +79,7 @@
   align-items: center;
   gap: 1rem;
   overflow: scroll;
+  padding: 1.5rem;
 }
 
 .cast {
@@ -86,6 +87,11 @@
   height: 12rem;
   text-align: center;
   margin: 0 auto;
+  transition: transform 0.4s;
+}
+
+.cast:hover {
+  transform: scale(1.1);
 }
 
 .cast img {
