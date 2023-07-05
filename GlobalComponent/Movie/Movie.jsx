@@ -26,9 +26,7 @@ const Movie = ({ themeMode, isFetching, movies, excludeFirst }) => {
                   src={
                     movie.poster_path
                       ? `https://image.tmdb.org/t/p/original${movie?.backdrop_path}`
-                      : themeMode
-                      ? images.darkLogo
-                      : images.lightLogo
+                      : "#"
                   }
                   alt={movie.original_title}
                   className={Style.movie_card_img}

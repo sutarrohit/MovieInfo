@@ -11,7 +11,7 @@ const Donate = ({ setOpenDonate }) => {
       <div className={Style.Donate_notice}>
         <p>
           Please give your support |{" "}
-          <Link target="blank" href={paymentLink}>
+          <Link target="blank" href={paymentLink || ""}>
             <strong>Donate Now</strong>
           </Link>
         </p>

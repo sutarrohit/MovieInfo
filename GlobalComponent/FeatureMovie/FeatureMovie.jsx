@@ -8,7 +8,7 @@ import images from "../Images/index";
 const FeatureMovie = ({ themeMode, isFetching, movie }) => {
   if (!movie) return null;
   return (
-    <Link href={`/movie/${movie.id}`}>
+    <Link href={`/movie/${movie.id}` || ""}>
       <div className={Style.Featuremovie}>
         <div className={Style.Featuremovie_box}>
           <img

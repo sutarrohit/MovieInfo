@@ -63,7 +63,7 @@ const MovieInformation = ({
               )}
 
               <Link
-                href={`https://imdb.com/title/${movieInfo?.imdb_id}`}
+                href={`https://imdb.com/title/${movieInfo?.imdb_id}` || "#"}
                 target="_blank"
               >
                 <button>
@@ -120,7 +120,7 @@ const MovieInformation = ({
             <div className={Style.topCast}>
               {movieInfo &&
                 movieInfo.credits.cast.slice(0, 6).map((character, key) => (
-                  <Link href={`/actors/${character?.id}`} key={key}>
+                  <Link href={`/actors/${character?.id}` || "#"} key={key}>
                     <div className={Style.cast}>
                       <img
                         src={`https://image.tmdb.org/t/p/original${character.profile_path}`}

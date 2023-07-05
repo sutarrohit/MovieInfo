@@ -48,7 +48,7 @@ const AuthorInformartion = ({ themeMode, actor, actorMovies }) => {
           {/* Button */}
           <div className={Style.button}>
             <Link
-              href={`https://imdb.com/name/${actor?.imdb_id}`}
+              href={`https://imdb.com/name/${actor?.imdb_id}` || "#"}
               target="_blank"
             >
               <button>IMDB</button>

@@ -103,7 +103,7 @@ const Sidebar = ({ menuOpen, setMenuOpen, themeMode }) => {
           {isFetching ? (
             <Loader />
           ) : (
-            data.genres.map(({ name, id }) => (
+            data?.genres?.map(({ name, id }) => (
               <Link href="/" key={id}>
                 <p
                   className={Style.link_box}
