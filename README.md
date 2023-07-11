@@ -1,5 +1,5 @@
 # Movie App
-### Movie App is a web application that allows users to browse and search for movies by genre and category, as well as view cast information and ratings. It is built with Next.js, Node.js, Redux Toolkit and CSS.
+### Movie App is a web application that allows users to browse and search for movies by genre and category, as well as view cast information and ratings. <br/>It is built with Next.js, Node.js, Redux Toolkit and CSS.
 
 ## Features
 - Browse movies by popular, top rated, upcoming and now playing categories
