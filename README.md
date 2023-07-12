@@ -13,7 +13,7 @@
 ## Installation
 ### To run the project locally, you need to have Node.js and npm installed on your machine. Then follow these steps:
 
-- Clone the repository: git clone https://github.com/your-username/movie-app.git
+- Clone the repository: git clone https://github.com/sutarrohit/movie-app.git
 - Navigate to the project directory: cd movie-app
 - Install the dependencies: npm install
 - Create a .env file in the root folder and add your API key from The Movie Database
