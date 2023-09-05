@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  movieinfo:
+    image: rohitsutar083/movieinfo:1.0.0
+    ports:
+      - "3000:3000"
+    networks:
+      - movieconnect
+
+# Create Custom network
+networks:
+  movieconnect:

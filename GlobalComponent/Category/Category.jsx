@@ -26,7 +26,7 @@ const Category = ({
   // STATE VARIABLES
   const [openLogin, setOpenLogin] = useState(false);
   const [openDonate, setOpenDonate] = useState(true);
-  const UseAlan = dynamic(() => import("../Alan/Alan"));
+  // const UseAlan = dynamic(() => import("../Alan/Alan"));
 
   return (
     <div
@@ -58,7 +58,7 @@ const Category = ({
             setMenuOpen={setMenuOpen}
             themeMode={themeMode}
           />
-          <UseAlan />
+          {/* <UseAlan /> */}
           <FeatureMovie
             themeMode={themeMode}
             isFetching={isFetching}
